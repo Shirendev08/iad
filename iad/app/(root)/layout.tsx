@@ -10,7 +10,6 @@ export default async function RootLayout({
   return (
     <main className="flex h-header w-full font-inter">
         <Sidebar/>
-        <Header/>
         <div className="flex size-full flex-col">
             <div className="root-layout">
             </div>
