@@ -9,7 +9,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="flex h-header w-full font-inter">
+    <main className="flex h-header w-full font-inter bg-slate-100">
         <Sidebar/>
         <div className="flex size-full flex-col">
             <div className="root-layout">

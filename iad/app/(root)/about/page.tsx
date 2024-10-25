@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer'
+import LiveChatButton from '@/components/LiveChatButton'
 import React from 'react'
 
 const page = () => {
@@ -15,14 +17,8 @@ const page = () => {
         allow="autoplay"
         className="rounded shadow-lg"
       ></iframe>
-      <button>Live Chat(Тун удахгүй)</button>
-      <div className='flex flex-col'>
-            Дотоод аудитын газар 2024 <br/>
-
-[ Bogd-audit@bogdbank.com ]  <br/>
-
-+976 7577 1199 (1007) 
-      </div>
+      <LiveChatButton/>
+      <Footer/>
   </div>
   )
 }
