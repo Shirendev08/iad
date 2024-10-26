@@ -5,10 +5,12 @@ import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Cards from '@/components/Cards'
+import Header from '@/components/Header'
 const page = () => {
   const pathname = usePathname()
   return (
     <div className='flex flex-col gap-4'>
+      <Header/>
         <div>
           <p>  ДАГ-ын үйл ажиллагаатай холбоотой мэдээллүүд</p>
         </div>
