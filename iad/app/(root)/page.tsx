@@ -6,26 +6,26 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Cards from '@/components/Cards'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 const page = () => {
   const pathname = usePathname()
   return (
-    <div className='flex flex-col gap-4'>
+    <>
       <Header title="Дотоод аудитын газартай холбоотой мэдээлэл" />
-        <div>
+        <div className='w-full h-[100px] bg-green-400 text-center items-center justify-center flex'>
           <p>  ДАГ-ын үйл ажиллагаатай холбоотой мэдээллүүд</p>
         </div>
+        <div className='flex justify-center sm:px-16 px-4'>
+        <div className='max-w-5xl w-full'>
           <Cards/>
+          </div>
+          </div>
 
 
             <button>Live Chat(Тун удахгүЙ)</button>
-            <div className='flex flex-col'>
-            Дотоод аудитын газар 2024 <br/>
-
-[ Bogd-audit@bogdbank.com ]  <br/>
-
-+976 7577 1199 (1007) 
-      </div>
-    </div>
+            
+            <Footer/>
+    </>
   )
 }
 
