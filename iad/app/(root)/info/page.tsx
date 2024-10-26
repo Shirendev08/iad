@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import Header from '@/components/Header'
 const page = () => {
   return (
     <div className='sm:left-1/4 sm:right-1/4 left-5 right-5'>
+      <Header title="Мэдээлэл" />
       <div className='flex'>
 
 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

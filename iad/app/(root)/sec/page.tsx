@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Header from '@/components/Header'
 const page = () => {
   return (
-    <div className='sm:left-1/4 sm:right-1/4 left-5 right-5 absolute'>
+    <>
+      <Header title="Зайны хяналт" />
+    <div className='sm:left-1/4 sm:right-1/4 left-5 right-5'>
        <p>  Дотоод аудитын газраас Богд банкны үйл ажиллагаанд хийгдэх тасралтгүй аудит буюу зайны хяналтыг 2024.04.01-ний өдрөөс эхлэн үйл ажиллагаанд МТГ-тай хамтран нэвтрүүлсэн. Уг үйл ажиллагааны дараагийн шат болгон ЭУГ, Комплайнсын хэлтэс,СУГ, БХГ-уудтай хамтран нэмэлт шалгуурыг 2024.11.01-ний өдрөөс нэвтрүүлсэн.</p>
         <p>Уг үйл ажиллагаатай холбогдуулан салбар, нэгжүүдийн зүгээс дараах зүйлсийг анхаарах нь зүйтэй. Үүнд:</p>
         <ol className='ml-10'>
@@ -13,7 +15,7 @@ const page = () => {
         <button>
           Live Chat(Тун удахгүй)
         </button>
-        <div className='flex flex-col'>
+        <div className='flex flex-row min-h-screen justify-center items-center'>
             Дотоод аудитын газар 2024 <br/>
 
 [ Bogd-audit@bogdbank.com ]  <br/>
@@ -21,6 +23,7 @@ const page = () => {
 +976 7577 1199 (1007) 
       </div>
     </div>
+    </>
   )
 }
 

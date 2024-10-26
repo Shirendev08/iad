@@ -10,7 +10,7 @@ const page = () => {
   const pathname = usePathname()
   return (
     <div className='flex flex-col gap-4'>
-      <Header/>
+      <Header title="Дотоод аудитын газартай холбоотой мэдээлэл" />
         <div>
           <p>  ДАГ-ын үйл ажиллагаатай холбоотой мэдээллүүд</p>
         </div>
