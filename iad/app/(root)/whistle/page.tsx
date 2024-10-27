@@ -63,7 +63,7 @@ const Page = () => {
             {/* Your list items here */}
           </ul>
 
-          <form onSubmit={handleFormSubmit} className="mr-1">
+          <form onSubmit={handleFormSubmit} className="mr-1 mb-10">
             <div className="mb-6">
               <label
                 htmlFor="name"
