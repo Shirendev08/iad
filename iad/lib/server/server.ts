@@ -5,12 +5,13 @@ interface FormData {
   name: string;
   email: string;
   information: string;
+  file: null
 }
 
-const sendEmail = async (formData: FormData) => {
-  const { name, email, information } = formData;
+const sendEmail = async (data: FormData): Promise<void> => {
+  const { name, email, information, file } = data;
 
-  console.log('Form Data received:', formData);
+  console.log('Form Data received:', data);
 
   // Set up the transporter
   const transporter = nodemailer.createTransport({
@@ -18,15 +19,11 @@ const sendEmail = async (formData: FormData) => {
     port: 587,
     secure: false,
     auth: {
-      user: 'pcniiacc@gmail.com',
-      pass: 'pcpcpc1234',
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS 
     },
   });
 
-  console.log('SMTP Configuration:', {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS ? '****' : 'MISSING PASSWORD',
-  });
 
   // Email content
   const mailOptions = {
@@ -38,6 +35,7 @@ const sendEmail = async (formData: FormData) => {
       <p><strong>Нэр:</strong> ${name}</p>
       <p><strong>Майл хаяг:</strong> ${email}</p>
       <p><strong>Санал хүсэлт:</strong> ${information}</p>
+      <p><strong>File:</strong> ${file}</p>
     `,
   };
 
@@ -46,8 +44,13 @@ const sendEmail = async (formData: FormData) => {
     console.log('Email sent successfully!');
   } catch (error) {
     console.error('Error sending email:', error);  // Log the error details
+    // Make sure to log the error message if it exists
+    if (error instanceof Error) {
+      console.error('Error message:', error.message);
+    }
     throw new Error('Failed to send email');
   }
 };
+
 
 export default sendEmail;
