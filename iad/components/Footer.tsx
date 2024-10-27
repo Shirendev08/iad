@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='flex flex-col bg-white mt-10 text-center bg-white'>
+    <div className='flex flex-col bg-white mt-10 text-center bg-white '>
     Дотоод аудитын газар 2024 <br/> <br/>
 
 [ Bogd-audit@bogdbank.com ]  <br/> <br/>

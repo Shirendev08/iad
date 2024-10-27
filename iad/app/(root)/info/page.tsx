@@ -5,6 +5,8 @@ const page = () => {
   return (
     <div className='sm:left-1/4 sm:right-1/4 left-5 right-5'>
       <Header title="Мэдээлэл" />
+      <div className='w-full h-[15px] mb-8 bg-green-600 text-center items-center justify-center flex'>
+      </div>
       <div className='flex'>
 
 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

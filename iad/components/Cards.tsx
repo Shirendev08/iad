@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 const Cards = () => {
     const pathname = usePathname()
   return (
-    <div className='flex'>
+    <div className='flex mt-20'>
           {sidebarLinks.slice(1).map((item)=>{
                 const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`)
                 return (

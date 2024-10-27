@@ -6,6 +6,8 @@ const page = () => {
   return (
 <>
     <Header title="ДАГ-ын талаар" />
+    <div className='w-full h-[15px] mb-8 bg-green-600 text-center items-center justify-center flex'>
+    </div>
     <div className="flex justify-center sm:px-16 px-4">
         <div className='max-w-5xl w-full'>
             <p className='mb-4'>

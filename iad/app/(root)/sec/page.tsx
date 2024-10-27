@@ -5,6 +5,8 @@ const page = () => {
   return (
     <>
       <Header title="Зайны хяналт" />
+      <div className='w-full mb-8 h-[15px] bg-green-600 text-center items-center justify-center flex'>
+      </div>
     <div className='flex justify-center sm:px-16 px-4'>
     <div className='max-w-5xl w-full'>
     <p>  Дотоод аудитын газраас Богд банкны үйл ажиллагаанд хийгдэх тасралтгүй аудит буюу зайны хяналтыг 2024.04.01-ний өдрөөс эхлэн үйл ажиллагаанд МТГ-тай хамтран нэвтрүүлсэн. Уг үйл ажиллагааны дараагийн шат болгон ЭУГ, Комплайнсын хэлтэс,СУГ, БХГ-уудтай хамтран нэмэлт шалгуурыг 2024.11.01-ний өдрөөс нэвтрүүлсэн.</p>
