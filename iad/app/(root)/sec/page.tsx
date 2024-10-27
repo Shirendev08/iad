@@ -1,14 +1,15 @@
 import React from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Button from '@/components/Button'
 const page = () => {
   return (
     <>
       <Header title="Зайны хяналт" />
-      <div className='w-full mb-8 h-[15px] bg-green-600 text-center items-center justify-center flex'>
+      <div className='w-full mb-8 h-[15px] bg-green-700 text-center items-center justify-center flex'>
       </div>
     <div className='flex justify-center sm:px-16 px-4'>
-    <div className='max-w-5xl w-full'>
+    <div className='max-w-5xl w-full bg-white'>
     <p>  Дотоод аудитын газраас Богд банкны үйл ажиллагаанд хийгдэх тасралтгүй аудит буюу зайны хяналтыг 2024.04.01-ний өдрөөс эхлэн үйл ажиллагаанд МТГ-тай хамтран нэвтрүүлсэн. Уг үйл ажиллагааны дараагийн шат болгон ЭУГ, Комплайнсын хэлтэс,СУГ, БХГ-уудтай хамтран нэмэлт шалгуурыг 2024.11.01-ний өдрөөс нэвтрүүлсэн.</p>
         <p>Уг үйл ажиллагаатай холбогдуулан салбар, нэгжүүдийн зүгээс дараах зүйлсийг анхаарах нь зүйтэй. Үүнд:</p>
         <ol className='ml-10'>
@@ -16,9 +17,7 @@ const page = () => {
           <li>2. Холбоотой ажилтнууд, газар нэгжүүдэд гарсан алдаатай холбоотой мэдээллийг заасан хугацаанд ирүүлэх,</li>
           <li>3. Алдаа зөрчлийг залруулахад хүндрэл тохиолдвол шийдвэр гаргах эрх бүхий ажилтнаас чиглэл авах, шийдвэр гаргуулах.</li>
         </ol>
-        <button>
-          Live Chat(Тун удахгүй)
-        </button>
+       <Button/>
        <Footer/>
       </div>
      

@@ -41,12 +41,12 @@ const page = () => {
   return (
     <>
     <Header title="Шүгэл үлээх суваг" />
-    <div className='w-full h-[15px] mb-8 bg-green-600 text-center items-center justify-center flex'>
+    <div className='w-full h-[15px] mb-8 bg-green-700 text-center items-center justify-center flex'>
     </div>
 
       <div className='flex justify-center sm:px-16 px-4'>
-        <div className='max-w-5xl w-full'>
-        <ul className=" list-disc list-inside dark:text-gray-400">
+        <div className='max-w-5xl w-full  '>
+        <ul className=" list-disc list-inside dark:text-gray-400 bg-white mb-5">
     <li>
     Та нэр болон и-мэйл бичихгүйгээр мэдээлэл илгээх боломжтой.
     </li>
@@ -67,7 +67,7 @@ const page = () => {
     </li>
 </ul>
       
-<form onSubmit={handleFormSubmit}>
+<form onSubmit={handleFormSubmit} className='mr-1'>
  
     <div className="mb-6">
         <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Нэр</label>
@@ -93,7 +93,7 @@ const page = () => {
     </label>
 </div> 
    
-    <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    <button type="submit" className="text-white mt-5 bg-green-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Илгээх</button>
 </form>
       <Footer/>
           </div>

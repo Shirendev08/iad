@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div className='sm:left-1/4 sm:right-1/4 left-5 right-5'>
       <Header title="Мэдээлэл" />
-      <div className='w-full h-[15px] mb-8 bg-green-600 text-center items-center justify-center flex'>
+      <div className='w-full h-[15px] mb-8 bg-green-700 text-center items-center justify-center flex'>
       </div>
       <div className='flex'>
 

@@ -3,28 +3,26 @@ import React from 'react'
 import Link from 'next/link'
 import { sidebarLinks } from '@/constants'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 const Cards = () => {
     const pathname = usePathname()
   return (
-    <div className='flex mt-20'>
+    <div className='flex mt-10 flex-wrap'>
           {sidebarLinks.slice(1).map((item)=>{
                 const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`)
                 return (
           
-                    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" key={item.route}>
+                    <div key={item.route} className='bg-white h-30 mb-5'>
                         
-    <div className="p-5">
+    <div className="">
         
-        <Link href={item.route} key={item.label} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     
-                        <p>
+        <Link href={item.route} key={item.label} className="">
+                        <Image src='/office.jpg' alt='img' width={200} height={100}/>
+                        <p className='text-center'>
                             {item.label}
                         </p>
-             <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
         </Link>
-    </div>
+    </div>  
 </div>
                 )
             })}
