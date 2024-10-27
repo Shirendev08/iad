@@ -24,7 +24,6 @@ const page = () => {
                 allow="autoplay"
                 className="rounded shadow-lg mb-4 mt-10"
             ></iframe>
-            <LiveChatButton />
             <Button/>
             <Footer />
         </div>
