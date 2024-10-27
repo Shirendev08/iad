@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import AccordionComponent from '@/components/Accordion'
 const page = () => {
   return (
     <div>
@@ -10,7 +9,6 @@ const page = () => {
         </div>
       <div className='flex justify-center sm:px-16 px-4'>
       <div className='max-w-5xl w-full'>
-      <AccordionComponent/>
     <Footer/>
         </div>
         </div>
