@@ -14,31 +14,30 @@ const Page = () => {
                 <div className='max-w-5xl w-full'>
                     <div className="flex flex-wrap"> {/* Make sure this is a flex container that wraps */}
 
-                        <div className='flex mt-10 flex-wrap'>
-                            <div key='' className='bg-white h-30 mb-5 w-1/2 p-2'> {/* Adjust width and padding for wrapping */}
-                                <div className="">
-                                    <Link href='' key='' className="block text-wrap"> {/* Added block for better text wrapping */}
-                                        <Image src='/office.jpg' alt='img' width={200} height={100} />
-                                        <p className='text-center'>
-                                            Салбаруудын үйл ажиллагаатай холбоотой анхаарах зүйлс
-                                        </p>
-                                    </Link>
-                                </div>
+                    <div  className='bg-white shadow-lg rounded-lg overflow-hidden w-64 m-4 transition-transform transform hover:scale-105}'>
+                        <Link href='' >
+                            <div className="relative">
+                                <Image src='/tic.png' alt='things to consider'width={256} height={128} className="object-cover w-full h-32" />
                             </div>
-                        </div>
-
-                        <div className='flex mt-10 flex-wrap'>
-                            <div key='' className='bg-white h-30 mb-5 w-1/2 p-2'> {/* Same adjustments here */}
-                                <div className="">
-                                    <Link href='' key='' className="block">
-                                        <Image src='/office.jpg' alt='img' width={200} height={100} />
-                                        <p className='text-center'>
-                                            Зарим эрсдэлээс урьдчилан сэргийлэх
-                                        </p>
-                                    </Link>
-                                </div>
+                            <div className="p-4">
+                                <p className="text-center text-gray-700 font-semibold">
+                                Салбаруудын үйл ажиллагаатай холбоотой анхаарах зүйлс
+                                </p>
                             </div>
-                        </div>
+                        </Link>
+                    </div>
+                    <div  className='bg-white shadow-lg rounded-lg overflow-hidden w-64 m-4 transition-transform transform hover:scale-105}'>
+                        <Link href='' >
+                            <div className="relative">
+                                <Image src='/rp.png' alt='things to consider'width={256} height={128} className="object-cover w-full h-32" />
+                            </div>
+                            <div className="p-4">
+                                <p className="text-center text-gray-700 font-semibold">
+                                Зарим эрсдэлээс урьдчилан сэргийлэх
+                                </p>
+                            </div>
+                        </Link>
+                    </div>
                     </div>
 
                     <Button />
@@ -50,3 +49,4 @@ const Page = () => {
 };
 
 export default Page;
+    
