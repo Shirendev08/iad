@@ -2,6 +2,7 @@ import Footer from '@/components/Footer'
 import LiveChatButton from '@/components/LiveChatButton'
 import React from 'react'
 import Header from '@/components/Header'
+import Button from '@/components/Button'
 const page = () => {
   return (
 <>
@@ -24,6 +25,7 @@ const page = () => {
                 className="rounded shadow-lg mb-4 mt-10"
             ></iframe>
             <LiveChatButton />
+            <Button/>
             <Footer />
         </div>
     </div>
