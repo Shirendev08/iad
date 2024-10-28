@@ -20,7 +20,7 @@ const Cards = () => {
                                 <Image src={item.img} alt={item.label} width={256} height={128} className="object-cover w-full h-32" />
                             </div>
                             <div className="p-4">
-                                <p className="text-center text-gray-700 font-semibold">
+                                <p className="text-center text-gray-700 font-semibold underline">
                                     {item.label}
                                 </p>
                             </div>

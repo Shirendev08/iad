@@ -15,12 +15,12 @@ const Page = () => {
                     <div className="flex flex-wrap"> {/* Make sure this is a flex container that wraps */}
 
                     <div  className='bg-white shadow-lg rounded-lg overflow-hidden w-64 m-4 transition-transform transform hover:scale-105}'>
-                        <Link href='' >
+                        <Link href='info/ttc' >
                             <div className="relative">
                                 <Image src='/tic.png' alt='things to consider'width={256} height={128} className="object-cover w-full h-32" />
                             </div>
                             <div className="p-4">
-                                <p className="text-center text-gray-700 font-semibold">
+                                <p className="text-center text-gray-700 font-semibold underline">
                                 Салбаруудын үйл ажиллагаатай холбоотой анхаарах зүйлс
                                 </p>
                             </div>
@@ -32,7 +32,7 @@ const Page = () => {
                                 <Image src='/rp.png' alt='things to consider'width={256} height={128} className="object-cover w-full h-32" />
                             </div>
                             <div className="p-4">
-                                <p className="text-center text-gray-700 font-semibold">
+                                <p className="text-center text-gray-700 font-semibold underline">
                                 Зарим эрсдэлээс урьдчилан сэргийлэх
                                 </p>
                             </div>

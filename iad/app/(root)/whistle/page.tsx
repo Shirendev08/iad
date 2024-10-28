@@ -17,7 +17,8 @@ const Page = () => {
     e.preventDefault();
     setLoading(true);
     setSuccess(false)
-
+    console.log("Submitting form...");
+    console.log("Form Data:", formData);
 
    
     const data = {
@@ -26,17 +27,24 @@ const Page = () => {
       information: formData.information,
       file: formData.file
     };
+    console.log(data,"adasd")
 
     try {
+      console.log("Sending email...");
       await sendEmail(data);
       setLoading(false);
-      setSuccess(true)
+      setSuccess
+      console.log("Email sent successfully!");
+      alert("Form submitted successfully");
     } catch (error: unknown) { // Specify the type here
       setLoading(false);
+      console.error("Error submitting form:", error);
   
       // Type guard to handle different types of errors
       if (error instanceof Error) {
+        alert("Failed to submit form: " + error.message);
       } else {
+        alert("Failed to submit form: An unknown error occurred.");
       }
     }
   };
@@ -56,18 +64,33 @@ const Page = () => {
 
       <div className="flex justify-center sm:px-16 px-4">
         <div className="max-w-5xl w-full">
+          <p className="bg-white">
+          Банкны үйл ажиллагаатай холбоотой заавар, журам зөрчсөн, залилангийн шинжтэй үйлдэл хийгдэж байгаа гэж үзэж байгаа бол доорх хэсэгт холбоотой мэдээллийг үлдээх боломжтой. Мөн <span className="underline">whistleblowing@bogdbank.com</span> хаягт и-мэйл хүргүүлэн мэдээлэх боломжтой.
+          </p>
           <ul className="list-disc list-inside dark:text-gray-400 bg-white mb-5">
-            {/* Your list items here */}
+            <li>
+            Та нэр болон и-мэйл бичихгүйгээр мэдээлэл илгээх боломжтой.
+            </li>
+            <li>
+            Таны илгээсэн мэдээлэл зөвхөн ТУЗ-ийн харъяа Ерөнхий аудиторт хүргэгдэнэ.
+
+
+            </li>
+            <li>
+            Шүгэл үлээгч нь шүгэл үлээхээс өмнө тухайн асуудлын талаар эргэлзэж байгаа бол Ерөнхий аудитороос зөвлөгөө авах боломжтой.
+            </li>
+            <li>
+            Банк нь шүгэл үлээгчийн аюулгүй байдлыг хангах, мэдүүлэгт дурдсан этгээд болон түүний үйлдэл, эс үйлдэхүйг зохих ёсоор шалгаж, шийдвэрлэх зорилгоор үр дүнтэй, боломжит бүхий л арга хэмжээг авна.
+            </li>
+            <li>
+            Шүгэл үлээгч нь шүгэл үлээсний улмаас түүний эрх ашиг зөрчигдөж, аливаа этгээдээс дарамт шахалт, сүрдүүлэг, хариу үйлдэл үзүүлж байна гэж үзвэл энэ талаар Ерөнхий аудиторт нэн даруй мэдэгдэх бөгөөд хэрэв тухайн мэдээлэл үндэслэлтэй бол Үйл ажиллагаа, хүний нөөцийн газар шалгах ажиллагааг гүйцэтгэж, холбогдох арга хэмжээг авна.
+            </li>
+            <li>
+            Шүгэл үлээгч нь шүгэл үлээсний улмаас түүний эрх ашиг зөрчигдөж, аливаа этгээдээс дарамт шахалт, сүрдүүлэг, хариу үйлдэл үзүүлж байна гэж үзвэл энэ талаар Ерөнхий аудиторт нэн даруй мэдэгдэх бөгөөд хэрэв тухайн мэдээлэл үндэслэлтэй бол Үйл ажиллагаа, хүний нөөцийн газар шалгах ажиллагааг гүйцэтгэж, холбогдох арга хэмжээг авна.
+            </li>
+         
           </ul>
-          {success && (
-            <div
-              className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
-              role="alert"
-            >
-              <strong className="font-bold">Амжилттай!</strong>
-              <span className="block sm:inline">Таны маягт амжилттай илгээгдлээ.</span>
-            </div>
-          )}
+
           <form onSubmit={handleFormSubmit} className="mr-1 mb-10">
             <div className="mb-6">
               <label
