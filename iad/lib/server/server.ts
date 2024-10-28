@@ -10,16 +10,19 @@ interface FormData {
 
 const sendEmail = async (data: FormData): Promise<void> => {
   const { name, email, information, file } = data;
-
+  var fileContent = null
+  if (file){
+    fileContent = Buffer.from(await (file as File).arrayBuffer());
+  }
 
   // Set up the transporter
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: 'smtp.outlook.com',
     port: 587,
     secure: false,
     auth: {
-      user: 'pcniiacc@gmail.com',
-      pass: 'omlm sujr kczy gour' 
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS 
     },
   });
 
@@ -27,7 +30,7 @@ const sendEmail = async (data: FormData): Promise<void> => {
   // Email content
   const mailOptions = {
     from: process.env.SMTP_USER,
-    to: 'whistleblowing@bogdbank.com',
+    to: 'rm808@bogdbank.com',
     subject: 'Шүгэл үлээх суваг',
     html: `
       <h1>Шүгэл үлээх суваг</h1>
@@ -36,6 +39,12 @@ const sendEmail = async (data: FormData): Promise<void> => {
       <p><strong>Санал хүсэлт:</strong> ${information}</p>
       <p><strong>File:</strong> ${file}</p>
     `,
+    attachments: file && fileContent? [
+      {
+        filename: (file as File).name,
+        content: fileContent,
+      },
+    ]:undefined,
   };
 
   try {
@@ -43,6 +52,7 @@ const sendEmail = async (data: FormData): Promise<void> => {
   } catch (error) {
     // Make sure to log the error message if it exists
     if (error instanceof Error) {
+      console.log(error.message);
     }
     throw new Error('Failed to send email');
   }
