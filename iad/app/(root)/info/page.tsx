@@ -27,7 +27,7 @@ const Page = () => {
                         </Link>
                     </div>
                     <div  className='bg-white shadow-lg rounded-lg overflow-hidden w-64 m-4 transition-transform transform hover:scale-105}'>
-                        <Link href='' >
+                        <Link href='info/rp' >
                             <div className="relative">
                                 <Image src='/rp.png' alt='things to consider'width={256} height={128} className="object-cover w-full h-32" />
                             </div>

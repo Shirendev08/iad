@@ -5,7 +5,7 @@ import Button from '@/components/Button'
 const page = () => {
   return (
     <div className='sm:left-1/4 sm:right-1/4 left-5 right-5'>
-    <Header title="Мэдээлэл" />
+    <Header title="Салбаруудын үйл ажиллагаатай холбоотой анхаарах зүйлс" />
     <div className='w-full h-[15px] mb-8 bg-green-700 text-center items-center justify-center flex'></div>
     <div className='flex justify-center sm:px-16 px-4'>
         <div className='max-w-5xl w-full'>
