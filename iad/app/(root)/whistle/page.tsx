@@ -17,8 +17,6 @@ const Page = () => {
     e.preventDefault();
     setLoading(true);
     setSuccess(false)
-    console.log("Submitting form...");
-    console.log("Form Data:", formData);
 
    
     const data = {
@@ -27,24 +25,17 @@ const Page = () => {
       information: formData.information,
       file: formData.file
     };
-    console.log(data,"adasd")
 
     try {
-      console.log("Sending email...");
       await sendEmail(data);
       setLoading(false);
-      setSuccess
-      console.log("Email sent successfully!");
-      alert("Form submitted successfully");
+      setSuccess(true)
     } catch (error: unknown) { // Specify the type here
       setLoading(false);
-      console.error("Error submitting form:", error);
   
       // Type guard to handle different types of errors
       if (error instanceof Error) {
-        alert("Failed to submit form: " + error.message);
       } else {
-        alert("Failed to submit form: An unknown error occurred.");
       }
     }
   };
@@ -90,7 +81,15 @@ const Page = () => {
             </li>
          
           </ul>
-
+          {success && (
+            <div
+              className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
+              role="alert"
+            >
+              <strong className="font-bold">Амжилттай!</strong>
+              <span className="block sm:inline">Таны маягт амжилттай илгээгдлээ.</span>
+            </div>
+          )}
           <form onSubmit={handleFormSubmit} className="mr-1 mb-10">
             <div className="mb-6">
               <label
