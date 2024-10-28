@@ -19,9 +19,9 @@ const MobileNav = () => {
 
     return (
         <nav className="bg-white border-gray-200 absolute w-full z-1000">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse" onClick={closeMenu}>
-                    <Image src='/logo.png' alt='logo' width={120} height={100} />
+            <div className="flex flex-wrap items-center justify-between w-full">
+                <Link href="/" className="flex items-center" onClick={closeMenu}>
+                    <Image src='/logo.png' alt='logo' width={120} height={100} className='' />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">IAD</span>
                 </Link>
 
@@ -29,7 +29,7 @@ const MobileNav = () => {
                 <button
                     onClick={toggleMenu}
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    className="inline-flex mr-8 items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-default"
                     aria-expanded={isMenuOpen}
                 >

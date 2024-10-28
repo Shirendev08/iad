@@ -12,7 +12,7 @@ const Sidebar = () => {
         <nav className='flex flex-col gap-4'>
             <Link href="/" className='mb-12 cursor-pointer items-center gap-2 flex'>
             <Image src='/logo.png' alt='logo' width={120} height={100}/>
-            <h1 className='sidebar-logo left-1/2'>IAD</h1>
+            <h1 className='sidebar-logo '>IAD</h1>
             </Link>
             {sidebarLinks.map((item)=>{
                 const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`)
