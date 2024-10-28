@@ -30,7 +30,7 @@ const sendEmail = async (data: FormData): Promise<void> => {
   // Email content
   const mailOptions = {
     from: process.env.SMTP_USER,
-    to: 'rm808@bogdbank.com',
+    to: process.env.SMTP_RECIEVER,
     subject: 'Шүгэл үлээх суваг',
     html: `
       <h1>Шүгэл үлээх суваг</h1>
