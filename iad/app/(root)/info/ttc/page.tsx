@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Button from '@/components/Button'
 const page = () => {
   return (
     <div className='sm:left-1/4 sm:right-1/4 left-5 right-5'>
@@ -44,7 +43,6 @@ const page = () => {
 
             </div>
 
-            <Button />
             <Footer />
         </div>
     </div>

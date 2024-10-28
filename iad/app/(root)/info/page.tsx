@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import Button from '@/components/Button';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 
@@ -40,7 +39,6 @@ const Page = () => {
                     </div>
                     </div>
 
-                    <Button />
                     <Footer />
                 </div>
             </div>

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import sendEmail from "@/lib/server/server";
-import Button from "@/components/Button";
 const Page = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -184,7 +183,7 @@ const Page = () => {
               {loading ? "Илгээж байна..." : "Илгээх"}
             </button>
           </form>
-          <Button/>
+          
           <Footer />
         </div>
       </div>

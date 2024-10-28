@@ -7,7 +7,6 @@ import Link from 'next/link'
 import Cards from '@/components/Cards'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Button from '@/components/Button'
 const page = () => {
   const pathname = usePathname()
   return (
@@ -19,7 +18,6 @@ const page = () => {
         <div className='flex justify-center sm:px-16 px-4'>
         <div className='max-w-5xl w-full'>
           <Cards/>
-            <Button/>
             <Footer/>
           </div>
           </div>

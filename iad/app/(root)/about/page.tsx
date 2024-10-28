@@ -2,7 +2,6 @@ import Footer from '@/components/Footer'
 import LiveChatButton from '@/components/LiveChatButton'
 import React from 'react'
 import Header from '@/components/Header'
-import Button from '@/components/Button'
 const page = () => {
   return (
 <>
@@ -24,7 +23,6 @@ const page = () => {
                 allow="autoplay"
                 className="rounded shadow-lg mb-4 mt-10"
             ></iframe>
-            <Button/>
             <Footer />
         </div>
     </div>
